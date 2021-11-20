@@ -20,5 +20,15 @@ public class ZooApp implements WebMvcConfigurer {
 
     public static void main(String[] args) {
         SpringApplication.run(ZooApp.class, args);
+
+        try {
+            int hem;
+            hem = 1 / 0;
+
+            System.out.println("this is shoebill division !");
+        } catch (Exception e) {
+            System.out.println("Exception thrown is: " + e);
+        }
+
     }
 }

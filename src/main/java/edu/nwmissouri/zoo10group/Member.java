@@ -12,12 +12,22 @@ public class Member extends Visitor {
     protected int animalsVisited = 0;
 
     /**
-     * Member interface so that gives details about the entrance fee, discount and size of the group
+     * Member interface so that gives details about the entrance fee, discount
+     * and size of the group
      */
     public Member() {
         this.entranceFee = 50;
         this.discount = 10;
         this.groupSize = 1;
+
+        try {
+            int a[] = new int[4];
+            System.out.println("Access element three :" + a[8]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception thrown  :" + e);
+        } finally {
+            System.out.println("Out of the block");
+        }
     }
 
     /**
@@ -29,6 +39,7 @@ public class Member extends Visitor {
 
     /**
      * Gets the animal visited
+     *
      * @return
      */
     public int getAnimalsVisited() {
